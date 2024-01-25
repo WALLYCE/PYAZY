@@ -19,8 +19,21 @@ def main(page: ft.Page):
     page.window_width = 800
     page.window_height = 800
     page.window_resizable = False
-
+    color_status = 'red300'
     page.add(
+         ft.ResponsiveRow(
+            [
+                ft.Container(
+                    ft.Text("Desconectado", size= 20, weight=ft.FontWeight.W_900, selectable=True),
+                    height=30,
+                    expand=True,
+                    alignment=ft.alignment.center,
+                    bgcolor=color_status,
+                    border=ft.border.all(2, ft.colors.GREY_500),
+                    
+                )
+            ]
+         ),
         ft.ResponsiveRow(
             [
                 ft.Container(
